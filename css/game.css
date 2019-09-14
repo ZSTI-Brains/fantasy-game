@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    box-sizing: border-box;
+    height: 7vh;
+    text-align: center;
+    padding: 2.5px;
+    font-size: 2.5vh;
+    font-weight: bold;
+    background-color: #1c1c27;
+    color: #fff;
+}
+
+nav {
+    box-sizing: border-box;
+    background-color: #191a23;
+    width: 20%; 
+    height: 90vh;
+    color: #494b5a;
+}
+
+main {
+    box-sizing: border-box;
+    background-color: #191a23;
+    width: 80%;
+    height: 90vh;
+    border-left: 20px solid #090b0c;
+    border-top: 20px solid #090b0c;
+}
+
+footer {
+    box-sizing: border-box;
+    background-color: #090b0c;
+    text-align: center;
+    height: 3vh;
+    color: #fff;
+    font-size: 1.8vh;
+    padding: 2px;
+}
+
+h1 {
+    margin: 0;
+}
+
+#flex-contener {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#name{
+    color: #696868;
+}
+
+#name:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+nav > p {
+    font-family: Roboto Mono;
+    font-weight: bold;
+}
+
+#nickname {
+    margin-top: 8vh;
+}
+
+#gold-level {
+    font-family: Roboto Mono;
+    font-weight: bold;
+    font-size: 2.1vh;
+    margin: 1vh 0;
+    color: #fff;
+}
+
+#level {
+    text-align: left;
+    margin-left: 10px;
+    float: left;
+}
+
+#gold {
+    text-align: right;
+    float: right;
+    margin-right: 10px;
+}
+
+.character {
+    text-align: center;
+    margin: 2vh 3vh;
+    font-size: 2.4vh;
+}
+
+.tag {
+    color: #4b6183;
+}
+
+#continue {
+    margin: 14vh 0 2vh 0;   
+}
+
+#magic, #equipment {
+    margin: 3vh 0;
+}
+
+#equipment, #magic, #continue {
+    text-align: center;
+    font-size: 3.5vh;
+}
+
+#equipment:hover, #magic:hover, #continue:hover {
+    color: #FF3333;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#equipment-div, #magic-div, #default {
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Baloo Da;
+}
+
+#default {
+    text-align: center;
+}
+
+#text-container {
+    font-size: 30px;
+}
+
+input[type="button"], input[type="text"] {
+    background-color: #161721;
+    border-color: #0085ff;
+    color: white;
+    font-size: 25px;
+    font-family: Baloo Da;
+    padding: 3px 40px; 
+    border-radius: 30px;
+    text-align: center;
+    margin: 10px;
+}
+
+input[type="text"] {
+    color: #2e94a2; 
+}
+
+::-webkit-input-placeholder {
+    color: #285c63;
+}
