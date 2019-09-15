@@ -1,7 +1,15 @@
 Human -
+    - Warrior -
+    - Archer -
 
 Elf - 
+    - Sorcerer - 
 
 Half elf -
-    -Assasin -
+    - Assasin - 
+
+Beastman -
+    - Centaur - 
+    - Faun - 
+    - Minotaur -
     

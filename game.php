@@ -35,8 +35,7 @@
                     
                 </p>
                 <div id="choose-container">
-                    <input type="text" placeholder="Name">
-                    <input type="button" value="Next">
+                   
                 </div>
             </div>
             <div id="equipment-div"> 

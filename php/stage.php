@@ -16,6 +16,8 @@
                 $name = $_POST["name"];
                 $query = "UPDATE `game` SET `name`='$name' WHERE `id_nickname`= \"1\"";
                 $mysqli->query($query);
+                $query = "UPDATE `game` SET `stage`='0.2' WHERE `id_nickname`= \"1\"";
+                $mysqli->query($query);
                 echo 0.2;
             }
         }
