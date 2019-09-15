@@ -26,32 +26,32 @@ function setCharacterInformation() {
             if(info[0].race == null)
                 race.innerHTML = "<span class=\"tag\">Race:</span> ???";
             else
-                race.innerHTML = "<span class=\"tag\">Race:</span>" + info[0].race;
+                race.innerHTML = "<span class=\"tag\">Race: </span>" + info[0].race;
             
             if(info[0].class == null)
                 clas.innerHTML = "<span class=\"tag\">Class:</span> ???";
             else
-                clas.innerHTML = "<span class=\"tag\">Class:</span>" + info[0].class;
+                clas.innerHTML = "<span class=\"tag\">Class: </span>" + info[0].class;
             
             if(info[0].sex == null)
                 sex.innerHTML = "<span class=\"tag\">Sex:</span> ???";
             else
-                sex.innerHTML = "<span class=\"tag\">Sex:</span>" + info[0].sex;
+                sex.innerHTML = "<span class=\"tag\">Sex: </span>" + info[0].sex;
             
             if(info[0].eyes == null)
                 eyes.innerHTML = "<span class=\"tag\">Eyes:</span> ???";
             else
-                eyes.innerHTML = "<span class=\"tag\">Eyes:</span>" + info[0].eyes;
+                eyes.innerHTML = "<span class=\"tag\">Eyes: </span>" + info[0].eyes;
             
             if(info[0].hair == null)
                 hair.innerHTML = "<span class=\"tag\">Hair:</span> ???";
             else
-                hair.innerHTML = "<span class=\"tag\">Hair:</span>" + info[0].hair;
+                hair.innerHTML = "<span class=\"tag\">Hair: </span>" + info[0].hair;
             
             if(info[0].goddes == null)
                 goddes.innerHTML = "<span class=\"tag\">Goddes:</span> ???";
             else
-                goddes.innerHTML = "<span class=\"tag\">Goddes:</span>" + info[0].goddes;
+                goddes.innerHTML = "<span class=\"tag\">Goddes: </span>" + info[0].goddes;
         }
     })
 };

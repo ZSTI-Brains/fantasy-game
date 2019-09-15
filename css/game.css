@@ -148,6 +148,12 @@ input[type="text"] {
     color: #2e94a2; 
 }
 
+.less {
+    font-size: 20px;
+    display: block;
+    font-style: italic;
+}
+
 ::-webkit-input-placeholder {
     color: #285c63;
 }

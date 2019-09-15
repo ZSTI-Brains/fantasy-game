@@ -3,6 +3,7 @@ Human -
     - Archer -
 
 Elf - 
+    - Archer -
     - Sorcerer - 
 
 Half elf -
@@ -12,4 +13,8 @@ Beastman -
     - Centaur - 
     - Faun - 
     - Minotaur -
+    - Werewolf -
+    - Werecat -
+
+Orc -
     
