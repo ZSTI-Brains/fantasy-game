@@ -17,16 +17,16 @@ function stage() {
         console.log(response);
         stageNumber = response;
         if (stageNumber == 0.1) {
-            text.innerHTML = "Choose a name for your character:";
+            text.innerHTML = "Wpisz imię dla swojej postaci:";
             
             const inputName = document.createElement("input");
             const inputNext = document.createElement("input");
             
             inputName.setAttribute("type", "text");
-            inputName.setAttribute("placeholder", "Name");
+            inputName.setAttribute("placeholder", "Imię");
             
             inputNext.setAttribute("type", "button");
-            inputNext.setAttribute("value", "Next");
+            inputNext.setAttribute("value", "Dalej");
             
             choose.appendChild(inputName);
             choose.appendChild(inputNext);
@@ -35,7 +35,7 @@ function stage() {
             inputNext.addEventListener("click", nextStage);
         }
         if(stageNumber == 0.2) {
-            text.innerHTML = "Choose a race for your character: <span class=\"less\">(Remember each race has different classes, choose soberly.)<span>";  
+            text.innerHTML = "Wybierz rasę dla swojej postaci: <span class=\"less\">(Pamiętaj, każda rasa ma przypisaną inną kalsę, wybieraj mądrze.)<span>";  
             choose.innerHTML = "";
             
             const inputHuman = document.createElement("input");
@@ -50,11 +50,11 @@ function stage() {
             inputBeastman.setAttribute("type", "button");
             inputOrc.setAttribute("type", "button");
             
-            inputHuman.setAttribute("value", "Human");
+            inputHuman.setAttribute("value", "Człowiek");
             inputElf.setAttribute("value", "Elf");
-            inputHalfElf.setAttribute("value", "Half Elf");
-            inputBeastman.setAttribute("value", "Beastman");
-            inputOrc.setAttribute("value", "Orc");
+            inputHalfElf.setAttribute("value", "Półelf");
+            inputBeastman.setAttribute("value", "Zwierzoczłek");
+            inputOrc.setAttribute("value", "Ork");
 
             choose.appendChild(inputHuman);
             choose.appendChild(inputElf);
@@ -62,11 +62,11 @@ function stage() {
             choose.appendChild(inputBeastman);
             choose.appendChild(inputOrc);
             
-            inputHuman.addEventListener("click", function(){race = "Human"; nextStage();})
-            inputElf.addEventListener("click", function(){race = "Elf"; nextStage();})
-            inputHalfElf.addEventListener("click", function(){race = "Half Elf"; nextStage();})
-            inputBeastman.addEventListener("click", function(){race = "Beastman"; nextStage();})
-            inputOrc.addEventListener("click", function(){race = "Orc"; nextStage();})
+            inputHuman.addEventListener("click", function(){race = "Human"; typeRace(race); race = "Człowiek";})            //change
+            inputElf.addEventListener("click", function(){race = "Elf"; typeRace(race); race = "Elf";})                     //change
+            inputHalfElf.addEventListener("click", function(){race = "Half-Elf"; typeRace(race); race = "Półelf";})         //change
+            inputBeastman.addEventListener("click", function(){race = "Beastman"; typeRace(race); race = "Zwierzoczłek";})  //change
+            inputOrc.addEventListener("click", function(){race = "Orc"; typeRace(race); race = "Ork";})                     //change
         }  
     })
 };

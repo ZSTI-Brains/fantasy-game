@@ -12,7 +12,7 @@ function goldAndLevel() {
     .done(function(response) {
         let data = JSON.parse(response);
         
-        level.innerHTML = "Level: " + data[0];
-        gold.innerHTML = "Gold: " + data[1];
+        level.innerHTML = "Poziom: " + data[0];
+        gold.innerHTML = "Złoto: " + data[1];
     })
 };

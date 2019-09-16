@@ -25,9 +25,9 @@
             <p id="hair" class="character"></p>
             <p  id="goddes" class="character"></p>
             
-            <p id="continue">Continue</p>
-            <p id="equipment">Equipment</p>
-            <p id="magic">Magic</p>
+            <p id="continue">Opowieść</p>
+            <p id="equipment">Wyposarzenie</p>
+            <p id="magic">Magia</p>
         </nav>
         <main>
             <div id="default"> 
@@ -57,5 +57,6 @@
     <script src="js/chatacter-info.js"></script>
     <script src="js/gold-and-level.js"></script>
     <script src="js/stage.js"></script>
+    <script src="js/race-and-class.js"></script>
 </body>
 </html>

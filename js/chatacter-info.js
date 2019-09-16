@@ -24,34 +24,34 @@ function setCharacterInformation() {
                 name.innerHTML = info[0].name;
             
             if(info[0].race == null)
-                race.innerHTML = "<span class=\"tag\">Race:</span> ???";
+                race.innerHTML = "<span class=\"tag\">Rasa:</span> ???";
             else
-                race.innerHTML = "<span class=\"tag\">Race: </span>" + info[0].race;
+                race.innerHTML = "<span class=\"tag\">Rasa: </span>" + info[0].race;
             
             if(info[0].class == null)
-                clas.innerHTML = "<span class=\"tag\">Class:</span> ???";
+                clas.innerHTML = "<span class=\"tag\">Klasa:</span> ???";
             else
-                clas.innerHTML = "<span class=\"tag\">Class: </span>" + info[0].class;
+                clas.innerHTML = "<span class=\"tag\">Klasa: </span>" + info[0].class;
             
             if(info[0].sex == null)
-                sex.innerHTML = "<span class=\"tag\">Sex:</span> ???";
+                sex.innerHTML = "<span class=\"tag\">Płeć:</span> ???";
             else
-                sex.innerHTML = "<span class=\"tag\">Sex: </span>" + info[0].sex;
+                sex.innerHTML = "<span class=\"tag\">Płeć: </span>" + info[0].sex;
             
             if(info[0].eyes == null)
-                eyes.innerHTML = "<span class=\"tag\">Eyes:</span> ???";
+                eyes.innerHTML = "<span class=\"tag\">Oczy:</span> ???";
             else
-                eyes.innerHTML = "<span class=\"tag\">Eyes: </span>" + info[0].eyes;
+                eyes.innerHTML = "<span class=\"tag\">Oczy: </span>" + info[0].eyes;
             
             if(info[0].hair == null)
-                hair.innerHTML = "<span class=\"tag\">Hair:</span> ???";
+                hair.innerHTML = "<span class=\"tag\">Włosy:</span> ???";
             else
-                hair.innerHTML = "<span class=\"tag\">Hair: </span>" + info[0].hair;
+                hair.innerHTML = "<span class=\"tag\">Włosy: </span>" + info[0].hair;
             
             if(info[0].goddes == null)
-                goddes.innerHTML = "<span class=\"tag\">Goddes:</span> ???";
+                goddes.innerHTML = "<span class=\"tag\">Wiara:</span> ???";
             else
-                goddes.innerHTML = "<span class=\"tag\">Goddes: </span>" + info[0].goddes;
+                goddes.innerHTML = "<span class=\"tag\">Wiara: </span>" + info[0].goddes;
         }
     })
 };

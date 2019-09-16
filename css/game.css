@@ -122,6 +122,7 @@ nav > p {
     width: 100%;
     box-sizing: border-box;
     font-family: Baloo Da;
+    padding: 30px;
 }
 
 #default {
@@ -152,6 +153,10 @@ input[type="text"] {
     font-size: 20px;
     display: block;
     font-style: italic;
+}
+
+.description {
+    font-size: 26px;
 }
 
 ::-webkit-input-placeholder {
