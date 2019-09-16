@@ -18,7 +18,7 @@ function typeRace(r) {
     else if (r == "Half-Elf") 
         description.innerText = "Półelfy to najdziwniejsze istoty, przez swą mieszaną krew. Są z nich za równo dobrzy magowie jak i wojownicy jednak najczęściej trudnią się sztuce skrytobójczej, jako zabójcy do wynajęcia, mimo iż nie są darzeni zbytnim szacunkiem, to nikt nie próbuje wchodzić im w drogę.";
     else if (r == "Beastman") 
-        description.innerText = "Zwierzoludzie";
+        description.innerText = "Zwierzoludzie trudno jest spotkać na kontynencie, od czasu wojen Ormiańskich czy samego buntu zwierzoludzi nie ostało ich się za wiele, szczególnie na kontynencie. Są bardziej uważane za relikty, gdy któryś z nich zjawi się w mieście, przyciąga uwagę niezliczonych gapiów. Zwierzoludzie to bardzo ogólna nazwa opisująca zarówno centaury, fauny, minotaury, kotołaki czy wilkołaki które w dzień przypominają ludzi a w nocy przemieniają się w straszliwą bestię.";
     else if (r == "Orc") 
         description.innerText = "Orkowie to najbardziej znienawidzone istoty na kontynencie, każdy inna rasa pała do nich nienawiścią. Orkowie nie mają ziem na których mogliby się osiedlić, dlatego najczęściej wybierają walkę pod rozkazami ludzkiego czy elfiego pana. Ci bez przynależności spotykają się najczęściej z linczem. Mimo tak wielu wad są silni i znacznie bardziej wytrzymali.";
 
