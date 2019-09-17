@@ -3,6 +3,7 @@ stage();
 var stageNumber;
 var name;
 var race;
+var clas;
 
 function stage() {
     const text = document.querySelector("#text-container");
@@ -34,7 +35,7 @@ function stage() {
             $(inputNext).on('click', inputName, function() {name = inputName.value;})
             inputNext.addEventListener("click", nextStage);
         }
-        if(stageNumber == 0.2) {
+        else if(stageNumber == 0.2) {
             text.innerHTML = "Wybierz rasę dla swojej postaci: <span class=\"less\">(Pamiętaj, każda rasa ma przypisaną inną kalsę, wybieraj mądrze.)<span>";  
             choose.innerHTML = "";
             
@@ -67,7 +68,28 @@ function stage() {
             inputHalfElf.addEventListener("click", function(){race = "Half-Elf"; typeRace(race); race = "Półelf";})         //change
             inputBeastman.addEventListener("click", function(){race = "Beastman"; typeRace(race); race = "Zwierzoczłek";})  //change
             inputOrc.addEventListener("click", function(){race = "Orc"; typeRace(race); race = "Ork";})                     //change
-        }  
+        }
+        else if (stageNumber == 0.3) {
+            text.innerHTML = "Wybierz klasę dla swojej postaci:";  
+            choose.innerHTML = "";
+            if (race == "Human" || race == "Człowiek") {
+                
+            }
+            else if (race == "Elf") {
+                const elfArcher = document.createElement("input");
+                const elfSorcerer = document.createElement("input");
+
+                elfArcher.setAttribute("type", "button");
+                elfSorcerer.setAttribute("type", "button");
+
+                elfArcher.setAttribute("value", "Łucznik");
+                elfSorcerer.setAttribute("value", "Czarodziej");
+
+                choose.appendChild(elfArcher);
+                choose.appendChild(elfSorcerer);
+            }
+
+        }
     })
 };
 
@@ -84,7 +106,7 @@ function nextStage() {
             stage();
         })
     }
-    if (stageNumber == 0.2){
+    else if (stageNumber == 0.2) {
         $.ajax({
             type: "post",
             data: {loading : 1, stage: stageNumber, race: race},
@@ -96,4 +118,17 @@ function nextStage() {
             stage();
         })   
     }
+    else if (stageNumber == 0.3) {
+        $.ajax({
+            type: "post",
+            data: {loading : 1, stage: stageNumber, class: clas},
+            url: "php/stage.php"
+        })
+        .done(function(response) {
+            stageNumber = response;
+            setCharacterInformation();
+            stage();
+        })   
+    }
+    
 }
