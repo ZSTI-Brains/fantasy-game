@@ -2,7 +2,7 @@
     require_once "password.php";
 
     $mysqli = new mysqli($db_server, $db_user, $db_pass, $db_name);
-    //echo $_POST["loading"];
+
     if ($_POST["loading"] == 0) {
         $query = "SELECT game.`stage` FROM `game` WHERE id_nickname = \"1\"";
         if ($result = $mysqli->query($query)) {
@@ -34,10 +34,10 @@
         else if(isset($_POST["class"])) {
             if ($_POST["stage"] == 0.3) {
                 $class = $_POST["class"];
-                $query = "UPDATE `game` SET `race`='$class' WHERE `id_nickname`= \"1\"";
-                //$mysqli->query($query);
-                //$query = "UPDATE `game` SET `stage`='0.4' WHERE `id_nickname`= \"1\"";
-                //$mysqli->query($query);
+                $query = "UPDATE `game` SET `class`='$class' WHERE `id_nickname`= \"1\"";
+                $mysqli->query($query);
+                $query = "UPDATE `game` SET `stage`='0.4' WHERE `id_nickname`= \"1\"";
+                $mysqli->query($query);
                 echo 0.4;
             }
         }

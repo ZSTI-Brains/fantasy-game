@@ -3,7 +3,7 @@
 
     $mysqli = new mysqli($db_server, $db_user, $db_pass, $db_name);
 
-    $query = "SELECT game.`name`, game.`race`, game.`sex`, game.`eyes`, game.`hair`, game.`goddes` FROM `game` WHERE id_nickname = \"1\"";
+    $query = "SELECT game.`name`, game.`race`, game.`class`, game.`sex`, game.`eyes`, game.`hair`, game.`goddes` FROM `game` WHERE id_nickname = \"1\"";
     if ($result = $mysqli->query($query)) {
         $info = array();
         

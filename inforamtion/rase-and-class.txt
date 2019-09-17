@@ -1,13 +1,18 @@
 Human -
     - Warrior -
     - Archer -
+    - Assasin - 
 
 Elf - 
     - Archer -
-    - Sorcerer - 
+    - Sorcerer -
+    - Assasin - 
 
 Half elf -
     - Assasin - 
+    - Warrior -
+    - Archer -
+    - Sorcerer - 
 
 Beastman -
     - Centaur - 
@@ -17,4 +22,5 @@ Beastman -
     - Werecat -
 
 Orc -
+    - Warrior -
     
