@@ -47,7 +47,7 @@ function typeClass(c) {
     const description = document.createElement("p");
     description.classList.add("description");
     if (c == "Assasin") { //Human & Elf & Half Elf
-        description.innerHTML = "Zabójcy to najczęściej pół elfy, którzy najczęściej wybierają to profesje ze względu na swoją rasę. Jednak nie brakuje również w tym fachu ludzi czy elfów, jednak umiejętnościami nie dorównują mieszańcom.";
+        description.innerHTML = "Zabójcy to najczęściej pół elfy, którzy wybierają to profesje ze względu na swoją rasę. Jednak nie brakuje również w tym fachu ludzi czy elfów, jednak umiejętnościami nie dorównują mieszańcom.";
     }
     else if (c == "Archer") { //Human & Elf & Half Elf
         description.innerHTML = "Sława elfich strzelców sięga poza kontynent, aż na samą wyspę, ich celność nie zna granic. Natomiast ludzcy strzelcy także są dobrzy, jednak wolą gdy nazywa się ich łowcami. A samych pół elfich strzelów jest tak mało że z łatwością można było ich policzyć.";
@@ -65,13 +65,13 @@ function typeClass(c) {
         description.innerHTML = "Faun wyróżnia szybkość i biegłość w władaniu bronią. Podczas buntu to oni wyrządzili największe krzywdy innym rasą, za co najbardziej zostali wymordowani spośród wszystkich innych zwierzoludzi. Często walczą w zbroi która specjalnie dopasowana prawie w ogóle ich nie spowalnia.";
     }
     else if (c == "Minotaur") {
-        description.innerHTML = "Minotaur";
+        description.innerHTML = "Minotaury najbardziej ze zwierzoludzi nie są podobni do ludzkich istot, ich głowa przypomina byczą, a reszta ciała mają pokryte sierścią. Duża siła i wytrzymałość, pozwalają na walkę z wymagającymi przeciwnikami. Jednak są słabi w walki na miecze, dlatego preferują wielkie topory.";
     }
     else if (c == "Werewolf") {
-        description.innerHTML = "Wilkołak";
+        description.innerHTML = "Wilkołaki w pół bestie w pół istoty ludzkie, kiedy księżyc jest w pełni przemieniają się w krwiożercze monstrum, maszynę do zabijania. Aby zaspokoić swój głód wybijają nawet całe wioski. Tak krwiożercze monstrum nie może się narodzić, są to normalni ludzie na których została rzucona klątwa, której nie łatwo jest się pozbyć. Dużą wadą wilkołaków jest mała odporność na odniesione ranę, wskutek zadania srebrnym mieczem czy bronią wykonaną z tego metalu.";
     }
     else if (c == "Werecat") {
-        description.innerHTML = "Kotołak";
+        description.innerHTML = "Kotołaki to istoty posiadające w swoim wyposażeniu na stałe ostre jak brzytwa pazurki. Większość ich ciała jest pokryta sierścią, tylko głowa która zachowała swój ludzki wygląd, oczywiście nie liczą kocich uszów. Są to naprawdę szybkie i zwinne istoty, posiadające przy sobie zawsze zabójczą broń.";
     }
     
     container.appendChild(description);

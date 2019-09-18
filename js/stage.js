@@ -5,6 +5,9 @@ var name;
 var race;
 var clas;
 var sex;
+var eyes;
+var hair;
+var gods;
 
 function stage() {
     const text = document.querySelector("#text-container");
@@ -18,7 +21,7 @@ function stage() {
     .done(function(response) {
         console.log(response);
         stageNumber = response;
-        if (stageNumber == 0.1) {
+        if (stageNumber == 0.1) { //Choose a name
             text.innerHTML = "Wpisz imię dla swojej postaci:";
             
             const inputName = document.createElement("input");
@@ -36,7 +39,7 @@ function stage() {
             $(inputNext).on('click', inputName, function() {name = inputName.value;})
             inputNext.addEventListener("click", nextStage);
         }
-        else if(stageNumber == 0.2) {
+        else if(stageNumber == 0.2) { //Choose a race
             text.innerHTML = "Wybierz rasę dla swojej postaci: <span class=\"less\">(Pamiętaj, każda rasa ma przypisaną inną kalsę, wybieraj mądrze.)<span>";  
             choose.innerHTML = "";
             
@@ -70,7 +73,7 @@ function stage() {
             inputBeastman.addEventListener("click", function(){race = "Beastman"; typeRace(race); race = "Zwierzoczłek"; select(this);})  //change
             inputOrc.addEventListener("click", function(){race = "Orc"; typeRace(race); race = "Ork"; select(this);})                     //change
         }
-        else if (stageNumber == 0.3) {
+        else if (stageNumber == 0.3) { //Choose a class
             text.innerHTML = "Wybierz klasę dla swojej postaci:";  
             choose.innerHTML = "";
             $.ajax({
@@ -182,7 +185,7 @@ function stage() {
             })
 
         }
-        else if (stageNumber == 0.4) {
+        else if (stageNumber == 0.4) { //Choose a sex
             text.innerHTML = "Wybierz płeć dla swojej postaci:";  
             choose.innerHTML = "";
             
@@ -198,8 +201,105 @@ function stage() {
             choose.appendChild(man);
             choose.appendChild(woman);
             
-            man.addEventListener("click", function(){sex = "Man"; /*NEXT STAGE*/ sex = "Mężczyzna"; select(this);})
-            woman.addEventListener("click", function(){sex = "Woman"; /*NEXT STAGE*/ sex = "Kobieta"; select(this);})
+            man.addEventListener("click", function(){sex = "Man"; sex = "Mężczyzna"; nextStage(); select(this);})
+            woman.addEventListener("click", function(){sex = "Woman"; sex = "Kobieta"; nextStage(); select(this);})
+        }
+        else if (stageNumber == 0.5) { //Choose a eyes color
+            text.innerHTML = "Wybierz kolor oczy dla swojej postaci:";  
+            choose.innerHTML = "";
+            
+            const blueEyes = document.createElement("input");
+            const greenEyes = document.createElement("input");
+            const brownEyes = document.createElement("input");
+            const redEyes = document.createElement("input");
+            const violetEyes = document.createElement("input");
+            
+            blueEyes.setAttribute("type", "button");
+            greenEyes.setAttribute("type", "button");
+            brownEyes.setAttribute("type", "button");
+            redEyes.setAttribute("type", "button");
+            violetEyes.setAttribute("type", "button");
+            
+            blueEyes.setAttribute("value", "Niebieskie");
+            greenEyes.setAttribute("value", "Zielone");
+            brownEyes.setAttribute("value", "Brązowe");
+            redEyes.setAttribute("value", "Czerwone");
+            violetEyes.setAttribute("value", "Fiołkowe");
+            
+            choose.appendChild(blueEyes);
+            choose.appendChild(greenEyes);
+            choose.appendChild(brownEyes);
+            choose.appendChild(redEyes);
+            choose.appendChild(violetEyes);
+            
+            blueEyes.addEventListener("click", function(){eyes = this.value; nextStage(); select(this);})
+            greenEyes.addEventListener("click", function(){eyes = this.value; nextStage(); select(this);})
+            brownEyes.addEventListener("click", function(){eyes = this.value; nextStage(); select(this);})
+            redEyes.addEventListener("click", function(){eyes = this.value; nextStage(); select(this);})
+            violetEyes.addEventListener("click", function(){eyes = this.value; nextStage(); select(this);})
+        }
+        else if (stageNumber == 0.6) { //Choose a hair color
+            text.innerHTML = "Wybierz kolor włosów dla swojej postaci:";  
+            choose.innerHTML = "";
+            
+            const whiteHair = document.createElement("input");
+            const blondHair = document.createElement("input");
+            const brownHair = document.createElement("input");
+            const blackHair = document.createElement("input");
+            const redHair = document.createElement("input");
+            
+            whiteHair.setAttribute("type", "button");
+            blondHair.setAttribute("type", "button");
+            brownHair.setAttribute("type", "button");
+            blackHair.setAttribute("type", "button");
+            redHair.setAttribute("type", "button");
+            
+            whiteHair.setAttribute("value", "Białe");
+            blondHair.setAttribute("value", "Blond");
+            brownHair.setAttribute("value", "Brązowe");
+            blackHair.setAttribute("value", "Czarne");
+            redHair.setAttribute("value", "Czerwone");
+            
+            choose.appendChild(whiteHair);
+            choose.appendChild(blondHair);
+            choose.appendChild(brownHair);
+            choose.appendChild(blackHair);
+            choose.appendChild(redHair);
+            
+            whiteHair.addEventListener("click", function(){hair = this.value; nextStage(); select(this);})
+            blondHair.addEventListener("click", function(){hair = this.value; nextStage(); select(this);})
+            brownHair.addEventListener("click", function(){hair = this.value; nextStage(); select(this);})
+            blackHair.addEventListener("click", function(){hair = this.value; nextStage(); select(this);})
+            redHair.addEventListener("click", function(){hair = this.value; nextStage(); select(this);})
+        }
+        else if (stageNumber == 0.7) { //Choose a ???
+            text.innerHTML = "Wybierz wiarę dla swojej postaci:";  
+            choose.innerHTML = "";
+            
+            const oldGods = document.createElement("input");
+            const redGoddes = document.createElement("input");
+            const threeInOne = document.createElement("input");
+            const ateizm = document.createElement("input");
+            
+            oldGods.setAttribute("type", "button");
+            redGoddes.setAttribute("type", "button");
+            threeInOne.setAttribute("type", "button");
+            ateizm.setAttribute("type", "button");
+            
+            oldGods.setAttribute("value", "Starzy Bogowie");
+            redGoddes.setAttribute("value", "Czerwona Bogini");
+            threeInOne.setAttribute("value", "Trójca");
+            ateizm.setAttribute("value", "Ateizm");
+            
+            choose.appendChild(oldGods);
+            choose.appendChild(redGoddes);
+            choose.appendChild(threeInOne);
+            choose.appendChild(ateizm);
+            
+            oldGods.addEventListener("click", function(){gods = this.value; /*nextStage();*/ select(this);})
+            redGoddes.addEventListener("click", function(){gods = this.value; /*nextStage();*/ select(this);})
+            threeInOne.addEventListener("click", function(){gods = this.value; /*nextStage();*/ select(this);})
+            ateizm.addEventListener("click", function(){gods = this.value; /*nextStage();*/ select(this);})
         }
     })
 };
@@ -233,6 +333,42 @@ function nextStage() {
         $.ajax({
             type: "post",
             data: {loading : 1, stage: stageNumber, class: clas},
+            url: "php/stage.php"
+        })
+        .done(function(response) {
+            stageNumber = response;
+            setCharacterInformation();
+            stage();
+        })   
+    }
+    else if (stageNumber == 0.4) {
+        $.ajax({
+            type: "post",
+            data: {loading : 1, stage: stageNumber, sex: sex},
+            url: "php/stage.php"
+        })
+        .done(function(response) {
+            stageNumber = response;
+            setCharacterInformation();
+            stage();
+        })   
+    }
+    else if (stageNumber == 0.5) {
+        $.ajax({
+            type: "post",
+            data: {loading : 1, stage: stageNumber, eyes: eyes},
+            url: "php/stage.php"
+        })
+        .done(function(response) {
+            stageNumber = response;
+            setCharacterInformation();
+            stage();
+        })   
+    }
+    else if (stageNumber == 0.6) {
+        $.ajax({
+            type: "post",
+            data: {loading : 1, stage: stageNumber, hair: hair},
             url: "php/stage.php"
         })
         .done(function(response) {

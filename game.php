@@ -57,6 +57,6 @@
     <script src="js/chatacter-info.js"></script>
     <script src="js/gold-and-level.js"></script>
     <script src="js/stage.js"></script>
-    <script src="js/race-and-class.js"></script>
+    <script src="js/race-class-gods.js"></script>
 </body>
 </html>

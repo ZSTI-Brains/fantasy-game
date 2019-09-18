@@ -41,6 +41,36 @@
                 echo 0.4;
             }
         }
+        else if(isset($_POST["sex"])) {
+            if ($_POST["stage"] == 0.4) {
+                $sex = $_POST["sex"];
+                $query = "UPDATE `game` SET `sex`='$sex' WHERE `id_nickname`= \"1\"";
+                $mysqli->query($query);
+                $query = "UPDATE `game` SET `stage`='0.5' WHERE `id_nickname`= \"1\"";
+                $mysqli->query($query);
+                echo 0.5;
+            }
+        }
+        else if(isset($_POST["eyes"])) {
+            if ($_POST["stage"] == 0.5) {
+                $eyes = $_POST["eyes"];
+                $query = "UPDATE `game` SET `eyes`='$eyes' WHERE `id_nickname`= \"1\"";
+                $mysqli->query($query);
+                $query = "UPDATE `game` SET `stage`='0.6' WHERE `id_nickname`= \"1\"";
+                $mysqli->query($query);
+                echo 0.6;
+            }
+        }
+        else if(isset($_POST["hair"])) {
+            if ($_POST["stage"] == 0.6) {
+                $hair = $_POST["hair"];
+                $query = "UPDATE `game` SET `hair`='$hair' WHERE `id_nickname`= \"1\"";
+                $mysqli->query($query);
+                $query = "UPDATE `game` SET `stage`='0.7' WHERE `id_nickname`= \"1\"";
+                $mysqli->query($query);
+                echo 0.7;
+            }
+        }
     }
 
      $mysqli->close();
