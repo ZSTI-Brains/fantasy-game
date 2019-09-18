@@ -143,6 +143,7 @@ input[type="button"], input[type="text"] {
     border-radius: 30px;
     text-align: center;
     margin: 10px;
+    outline: none;
 }
 
 input[type="text"] {

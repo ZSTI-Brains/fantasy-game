@@ -163,7 +163,7 @@ function stage() {
                     centaur.setAttribute("value", "Centaur");
                     faun.setAttribute("value", "Faun");
                     minotaur.setAttribute("value", "Minotaur");
-                    werewolf.setAttribute("value", "Wikołak");
+                    werewolf.setAttribute("value", "Wilkołak");
                     werecat.setAttribute("value", "Kotołak");
                     
                     choose.appendChild(centaur);
@@ -241,7 +241,6 @@ function nextStage() {
             stage();
         })   
     }
-    
 }
 
 function select(t) {

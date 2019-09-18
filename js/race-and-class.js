@@ -68,7 +68,7 @@ function typeClass(c) {
         description.innerHTML = "Minotaur";
     }
     else if (c == "Werewolf") {
-        description.innerHTML = "Wikołak";
+        description.innerHTML = "Wilkołak";
     }
     else if (c == "Werecat") {
         description.innerHTML = "Kotołak";
