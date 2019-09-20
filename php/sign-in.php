@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once "password.php";
 
     if (isset($_POST["nickname"])) {
@@ -12,11 +13,11 @@
             $is = $result->num_rows;
             if ($is > 0) {
                 $row = $result->fetch_assoc();
+                $_SESSION["idNickname"] = $row["id"];
                 $_SESSION["nickname"] = $row["nickname"];
-                $_SESSION["password"] = $row["password"];
 
                 $result->free_result(); 
-                header("Location:../index.php");
+                header("Location:../game.php");
             }
             else {
                 echo "Incorrect nickname or password, missing user!";

@@ -1,13 +1,6 @@
 stage();
 
-var stageNumber;
-var name;
-var race;
-var clas;
-var sex;
-var eyes;
-var hair;
-var gods;
+var stageNumber; var name; var race; var clas; var sex; var eyes; var hair; var gods;
 
 function stage() {
     const text = document.querySelector("#text-container");
@@ -19,7 +12,6 @@ function stage() {
         url: "php/stage.php"
     })
     .done(function(response) {
-        console.log(response);
         stageNumber = response;
         if (stageNumber == 0.1) { //Choose a name
             text.innerHTML = "Wpisz imię dla swojej postaci:";
@@ -67,11 +59,11 @@ function stage() {
             choose.appendChild(inputBeastman);
             choose.appendChild(inputOrc);
             
-            inputHuman.addEventListener("click", function(){race = "Human"; typeRace(race); race = "Człowiek"; select(this);})            //change
-            inputElf.addEventListener("click", function(){race = "Elf"; typeRace(race); race = "Elf"; select(this);})                     //change
-            inputHalfElf.addEventListener("click", function(){race = "Half-Elf"; typeRace(race); race = "Półelf"; select(this);})         //change
-            inputBeastman.addEventListener("click", function(){race = "Beastman"; typeRace(race); race = "Zwierzoczłek"; select(this);})  //change
-            inputOrc.addEventListener("click", function(){race = "Orc"; typeRace(race); race = "Ork"; select(this);})                     //change
+            inputHuman.addEventListener("click",    function(){race = this.value; typeRace(race); select(this);})            
+            inputElf.addEventListener("click",      function(){race = this.value; typeRace(race); select(this);})                     
+            inputHalfElf.addEventListener("click",  function(){race = this.value; typeRace(race); select(this);})     
+            inputBeastman.addEventListener("click", function(){race = this.value; typeRace(race); select(this);})  
+            inputOrc.addEventListener("click",      function(){race = this.value; typeRace(race); select(this);})                     
         }
         else if (stageNumber == 0.3) { //Choose a class
             text.innerHTML = "Wybierz klasę dla swojej postaci:";  
@@ -98,10 +90,9 @@ function stage() {
                     choose.appendChild(humanArcher);
                     choose.appendChild(humanWarrior);
                     
-                    humanWarrior.addEventListener("click", function(){clas = "Warrior"; typeClass(clas); clas = "Wojownik"; select(this);})      //change
-                    humanAssasin.addEventListener("click", function(){clas = "Assasin"; typeClass(clas); clas = "Zabójca"; select(this);})       //change
-                    humanArcher.addEventListener("click", function(){clas = "Archer"; typeClass(clas); clas = "Łowca"; select(this);})           //change
-                    
+                    humanWarrior.addEventListener("click", function(){clas = this.value; typeClass(clas); select(this);})      
+                    humanAssasin.addEventListener("click", function(){clas = this.value; typeClass(clas); select(this);})       
+                    humanArcher.addEventListener("click",  function(){clas = this.value; typeClass(clas); select(this);})           
                 }
                 else if (response == "Elf") {
                     const elfAssasin = document.createElement("input");
@@ -120,9 +111,9 @@ function stage() {
                     choose.appendChild(elfArcher);
                     choose.appendChild(elfSorcerer);
                     
-                    elfAssasin.addEventListener("click", function(){clas = "Assasin"; typeClass(clas); clas = "Zabójca"; select(this);})          //change
-                    elfArcher.addEventListener("click", function(){clas = "Archer"; typeClass(clas); clas = "Łucznik"; select(this);})            //change
-                    elfSorcerer.addEventListener("click", function(){clas = "Sorcerer"; typeClass(clas); clas = "Czarodziej"; select(this);})     //change
+                    elfAssasin.addEventListener("click",  function(){clas = this.value; typeClass(clas); select(this);})          
+                    elfArcher.addEventListener("click",   function(){clas = this.value; typeClass(clas); select(this);})            
+                    elfSorcerer.addEventListener("click", function(){clas = this.value; typeClass(clas); select(this);})     
                 }
                 else if (response == "Half-Elf" || response == "Półelf") {
                     const helfAssasin = document.createElement("input");
@@ -145,10 +136,10 @@ function stage() {
                     choose.appendChild(helfSorcerer);
                     choose.appendChild(helfWarrior);
                     
-                    helfWarrior.addEventListener("click", function(){clas = "Warrior"; typeClass(clas); clas = "Wojownik"; select(this);})         //change
-                    helfAssasin.addEventListener("click", function(){clas = "Assasin"; typeClass(clas); clas = "Zabójca"; select(this);})          //change
-                    helfArcher.addEventListener("click", function(){clas = "Archer"; typeClass(clas); clas = "Łucznik"; select(this);})            //change
-                    helfSorcerer.addEventListener("click", function(){clas = "Sorcerer"; typeClass(clas); clas = "Czarodziej"; select(this);})     //change
+                    helfWarrior.addEventListener("click",  function(){clas = this.value; typeClass(clas); select(this);})         /
+                    helfAssasin.addEventListener("click",  function(){clas = this.value; typeClass(clas); select(this);})         
+                    helfArcher.addEventListener("click",   function(){clas = this.value; typeClass(clas); select(this);})            
+                    helfSorcerer.addEventListener("click", function(){clas = this.value; typeClass(clas); select(this);})     
                 }
                  else if (response == "Beastman" || response == "Zwierzoczłek") {
                     const centaur = document.createElement("input");
@@ -175,12 +166,27 @@ function stage() {
                     choose.appendChild(werewolf);
                     choose.appendChild(werecat);
                     
-                    centaur.addEventListener("click", function(){clas = "Centaur"; typeClass(clas); clas = "Centaur"; select(this);})         //change
-                    faun.addEventListener("click", function(){clas = "Faun"; typeClass(clas); clas = "Faun"; select(this);})                  //change
-                    minotaur.addEventListener("click", function(){clas = "Minotaur"; typeClass(clas); clas = "Minotaur"; select(this);})      //change
-                    werewolf.addEventListener("click", function(){clas = "Werewolf"; typeClass(clas); clas = "Wikołak"; select(this);})       //change
-                    werecat.addEventListener("click", function(){clas = "Werecat"; typeClass(clas); clas = "Kotołak"; select(this);})         //change
-                   
+                    centaur.addEventListener("click",  function(){clas = this.value; typeClass(clas); select(this);})         
+                    faun.addEventListener("click",     function(){clas = this.value; typeClass(clas); select(this);})                  
+                    minotaur.addEventListener("click", function(){clas = this.value; typeClass(clas); select(this);})      
+                    werewolf.addEventListener("click", function(){clas = this.value; typeClass(clas); select(this);})       
+                    werecat.addEventListener("click",  function(){clas = this.value; typeClass(clas); select(this);})         
+                }
+                else if (response == "Ork" || response == "Orc") {
+                    const barbarian = document.createElement("input");
+                    const blackMagician = document.createElement("input");
+                    
+                    barbarian.setAttribute("type", "button");
+                    blackMagician.setAttribute("type", "button");
+                    
+                    barbarian.setAttribute("value", "Barbażyńca");
+                    blackMagician.setAttribute("value", "Czarnoksiężnik");
+                    
+                    choose.appendChild(barbarian);
+                    choose.appendChild(blackMagician);
+                    
+                    barbarian.addEventListener("click",     function(){clas = this.value; typeClass(clas); select(this);})       
+                    blackMagician.addEventListener("click", function(){clas = this.value; typeClass(clas); select(this);})  
                 }
             })
 
@@ -201,7 +207,7 @@ function stage() {
             choose.appendChild(man);
             choose.appendChild(woman);
             
-            man.addEventListener("click", function(){sex = "Man"; sex = "Mężczyzna"; nextStage(); select(this);})
+            man.addEventListener("click",   function(){sex = "Man"; sex = "Mężczyzna"; nextStage(); select(this);})
             woman.addEventListener("click", function(){sex = "Woman"; sex = "Kobieta"; nextStage(); select(this);})
         }
         else if (stageNumber == 0.5) { //Choose a eyes color
@@ -232,10 +238,10 @@ function stage() {
             choose.appendChild(redEyes);
             choose.appendChild(violetEyes);
             
-            blueEyes.addEventListener("click", function(){eyes = this.value; nextStage(); select(this);})
-            greenEyes.addEventListener("click", function(){eyes = this.value; nextStage(); select(this);})
-            brownEyes.addEventListener("click", function(){eyes = this.value; nextStage(); select(this);})
-            redEyes.addEventListener("click", function(){eyes = this.value; nextStage(); select(this);})
+            blueEyes.addEventListener("click",   function(){eyes = this.value; nextStage(); select(this);})
+            greenEyes.addEventListener("click",  function(){eyes = this.value; nextStage(); select(this);})
+            brownEyes.addEventListener("click",  function(){eyes = this.value; nextStage(); select(this);})
+            redEyes.addEventListener("click",    function(){eyes = this.value; nextStage(); select(this);})
             violetEyes.addEventListener("click", function(){eyes = this.value; nextStage(); select(this);})
         }
         else if (stageNumber == 0.6) { //Choose a hair color
@@ -270,7 +276,7 @@ function stage() {
             blondHair.addEventListener("click", function(){hair = this.value; nextStage(); select(this);})
             brownHair.addEventListener("click", function(){hair = this.value; nextStage(); select(this);})
             blackHair.addEventListener("click", function(){hair = this.value; nextStage(); select(this);})
-            redHair.addEventListener("click", function(){hair = this.value; nextStage(); select(this);})
+            redHair.addEventListener("click",   function(){hair = this.value; nextStage(); select(this);})
         }
         else if (stageNumber == 0.7) { //Choose a ???
             text.innerHTML = "Wybierz wiarę dla swojej postaci:";  
@@ -296,10 +302,10 @@ function stage() {
             choose.appendChild(threeInOne);
             choose.appendChild(ateizm);
             
-            oldGods.addEventListener("click", function(){gods = this.value; /*nextStage();*/ select(this);})
-            redGoddes.addEventListener("click", function(){gods = this.value; /*nextStage();*/ select(this);})
-            threeInOne.addEventListener("click", function(){gods = this.value; /*nextStage();*/ select(this);})
-            ateizm.addEventListener("click", function(){gods = this.value; /*nextStage();*/ select(this);})
+            oldGods.addEventListener("click",    function(){gods = this.value; typeGods(gods); select(this);})
+            redGoddes.addEventListener("click",  function(){gods = this.value; typeGods(gods); select(this);})
+            threeInOne.addEventListener("click", function(){gods = this.value; typeGods(gods); select(this);})
+            ateizm.addEventListener("click",     function(){gods = this.value; typeGods(gods); select(this);})
         }
     })
 };
@@ -375,6 +381,18 @@ function nextStage() {
             stageNumber = response;
             setCharacterInformation();
             stage();
+        })   
+    }
+    else if (stageNumber == 0.7) {
+        $.ajax({
+            type: "post",
+            data: {loading : 1, stage: stageNumber, gods: gods},
+            url: "php/stage.php"
+        })
+        .done(function(response) {
+            stageNumber = response;
+            setCharacterInformation();
+            stageOne();
         })   
     }
 }

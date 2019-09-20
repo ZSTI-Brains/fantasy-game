@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>TheThx</h1>
+        <h1></h1>
     </header>
     <div id="flex-contener">
         <nav>
@@ -26,7 +26,7 @@
             <p  id="goddes" class="character"></p>
             
             <p id="continue">Opowieść</p>
-            <p id="equipment">Wyposarzenie</p>
+            <p id="equipment">Plecak</p>
             <p id="magic">Magia</p>
         </nav>
         <main>
@@ -35,7 +35,7 @@
                     
                 </p>
                 <div id="choose-container">
-                   
+
                 </div>
             </div>
             <div id="equipment-div"> 
@@ -56,7 +56,8 @@
     <script src="js/change-container.js"></script>
     <script src="js/chatacter-info.js"></script>
     <script src="js/gold-and-level.js"></script>
-    <script src="js/stage.js"></script>
     <script src="js/race-class-gods.js"></script>
+    <script src="js/tutorial-stage.js"></script>
+    <script src="js/stage-one.js"></script>
 </body>
 </html>

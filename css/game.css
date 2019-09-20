@@ -133,7 +133,7 @@ nav > p {
     font-size: 30px;
 }
 
-input[type="button"], input[type="text"] {
+input[type="button"], input[type="text"], input[type="submit"] {
     background-color: #161721;
     border-color: #0085ff;
     color: white;

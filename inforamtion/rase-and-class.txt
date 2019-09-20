@@ -22,5 +22,6 @@ Beastman -
     - Werecat -
 
 Orc -
-    - Warrior -
+    - Barbażyńca
+    - Czarnoksiężnik
     

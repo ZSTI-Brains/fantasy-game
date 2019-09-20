@@ -1,13 +1,14 @@
 setCharacterInformation();
 
 function setCharacterInformation() {
-    const name = document.querySelector("#name");
-    const race = document.querySelector("#race");
-    const clas = document.querySelector("#class");
-    const sex = document.querySelector("#sex");
-    const eyes = document.querySelector("#eyes");
-    const hair = document.querySelector("#hair");
-    const goddes = document.querySelector("#goddes");
+    const name     = document.querySelector("#name");
+    const race     = document.querySelector("#race");
+    const clas     = document.querySelector("#class");
+    const sex      = document.querySelector("#sex");
+    const eyes     = document.querySelector("#eyes");
+    const hair     = document.querySelector("#hair");
+    const goddes   = document.querySelector("#goddes");
+    const nickname = document.querySelector("h1");
     
     $.ajax({
         type: "post",
@@ -17,6 +18,8 @@ function setCharacterInformation() {
     .done(function(response) {
         if (response !== "") {
             let info = JSON.parse(response);
+            console.log(info);
+            nickname.innerHTML = info[1].nickname;
             
             if(info[0].name == null)
                 name.innerHTML = "???";
@@ -48,10 +51,10 @@ function setCharacterInformation() {
             else
                 hair.innerHTML = "<span class=\"tag\">Włosy: </span>" + info[0].hair;
             
-            if(info[0].goddes == null)
+            if(info[0].gods == null)
                 goddes.innerHTML = "<span class=\"tag\">Wiara:</span> ???";
             else
-                goddes.innerHTML = "<span class=\"tag\">Wiara: </span>" + info[0].goddes;
+                goddes.innerHTML = "<span class=\"tag\">Wiara: </span>" + info[0].gods;
         }
     })
 };
