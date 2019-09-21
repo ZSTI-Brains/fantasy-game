@@ -2,7 +2,7 @@ goldAndLevel();
 
 function goldAndLevel() {
     const level = document.querySelector("#level");
-    const gold = document.querySelector("#gold");
+    const gold  = document.querySelector("#gold");
     
     $.ajax({
         type: "post",
@@ -13,6 +13,6 @@ function goldAndLevel() {
         let data = JSON.parse(response);
         
         level.innerHTML = "Poziom: " + data[0];
-        gold.innerHTML = "Złoto: " + data[1];
+        gold.innerHTML  = "Złoto: " + data[1];
     })
 };

@@ -26,8 +26,9 @@
             <p  id="goddes" class="character"></p>
             
             <p id="continue">Opowieść</p>
-            <p id="equipment">Plecak</p>
-            <p id="magic">Magia</p>
+            <p id="equipment">Postać</p>
+            <p id="magic" style="display: none;">Magia</p>
+            <p id="information">Informacje</p>
         </nav>
         <main>
             <div id="default"> 
@@ -40,14 +41,20 @@
             </div>
             <div id="equipment-div"> 
                 <div id="player-eq">
-                    
+                    EQ
                 </div>
                 <div id="backpack">
                     
                 </div>
+                <div id="skills">
+                    
+                </div>
             </div>
             <div id="magic-div">
-                
+                Magic
+            </div>
+            <div id="information-div">
+                Info
             </div>
         </main>
     </div>

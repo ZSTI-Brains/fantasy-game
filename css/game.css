@@ -71,7 +71,6 @@ nav > p {
 #gold-level {
     font-family: Roboto Mono;
     font-weight: bold;
-    font-size: 2.1vh;
     margin: 1vh 0;
     color: #fff;
 }
@@ -91,7 +90,6 @@ nav > p {
 .character {
     text-align: center;
     margin: 2vh 3vh;
-    font-size: 2.4vh;
 }
 
 .tag {
@@ -102,22 +100,22 @@ nav > p {
     margin: 14vh 0 2vh 0;   
 }
 
-#magic, #equipment {
+#magic, #equipment, #information {
     margin: 3vh 0;
 }
 
-#equipment, #magic, #continue {
+#equipment, #magic, #information, #continue {
     text-align: center;
     font-size: 3.5vh;
 }
 
-#equipment:hover, #magic:hover, #continue:hover {
+#equipment:hover, #magic:hover, #information:hover, #continue:hover {
     color: #FF3333;
     transform: scale(1.1);
     cursor: pointer;
 }
 
-#equipment-div, #magic-div, #default {
+#equipment-div, #magic-div, #information-div, #default  {
     color: white;
     width: 100%;
     box-sizing: border-box;
@@ -129,15 +127,10 @@ nav > p {
     text-align: center;
 }
 
-#text-container {
-    font-size: 30px;
-}
-
 input[type="button"], input[type="text"], input[type="submit"] {
     background-color: #161721;
     border-color: #0085ff;
     color: white;
-    font-size: 25px;
     font-family: Baloo Da;
     padding: 3px 40px; 
     border-radius: 30px;
@@ -151,15 +144,65 @@ input[type="text"] {
 }
 
 .less {
-    font-size: 20px;
     display: block;
     font-style: italic;
 }
 
-.description {
-    font-size: 26px;
+.storyText , .storyTextSpace {
+    display: inline-block;
+}
+.storyTextSpace {
+    padding: 0 4px;  
 }
 
 ::-webkit-input-placeholder {
     color: #285c63;
+}
+
+@media (min-width: 1350px) {
+    #gold-level {
+        font-size: 2.1vh;
+    }
+    .character {
+        font-size: 2.4vh;   
+    }
+    #equipment, #magic, #continue, #information {
+        font-size: 3.5vh;
+    }
+    input[type="button"], input[type="text"], input[type="submit"] {
+        font-size: 25px;
+    }
+    #text-container {
+        font-size: 30px;
+    }
+    .description {
+        font-size: 26px;
+    }
+    .less {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1349px) {
+    #gold-level {
+        font-size: 1.8vh;
+    }
+    .character {
+        font-size: 2vh;   
+    }
+    #equipment, #magic, #continue, #information {
+        font-size: 3vh;
+    }
+    input[type="button"], input[type="text"], input[type="submit"] {
+        font-size: 20px;
+    }
+        #text-container {
+        font-size: 25px;
+    }
+    .description {
+        font-size: 20px;
+    }
+    .less {
+        font-size: 17px;
+    }
 }

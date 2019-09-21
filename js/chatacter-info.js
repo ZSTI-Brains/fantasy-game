@@ -18,7 +18,7 @@ function setCharacterInformation() {
     .done(function(response) {
         if (response !== "") {
             let info = JSON.parse(response);
-            console.log(info);
+            
             nickname.innerHTML = info[1].nickname;
             
             if(info[0].name == null)

@@ -3,7 +3,7 @@ stage();
 var stageNumber; var name; var race; var clas; var sex; var eyes; var hair; var gods;
 
 function stage() {
-    const text = document.querySelector("#text-container");
+    const text   = document.querySelector("#text-container");
     const choose = document.querySelector("#choose-container");
     
     $.ajax({
@@ -35,11 +35,11 @@ function stage() {
             text.innerHTML = "Wybierz rasę dla swojej postaci: <span class=\"less\">(Pamiętaj, każda rasa ma przypisaną inną kalsę, wybieraj mądrze.)<span>";  
             choose.innerHTML = "";
             
-            const inputHuman = document.createElement("input");
-            const inputElf = document.createElement("input");
-            const inputHalfElf = document.createElement("input");
+            const inputHuman    = document.createElement("input");
+            const inputElf      = document.createElement("input");
+            const inputHalfElf  = document.createElement("input");
             const inputBeastman = document.createElement("input");
-            const inputOrc = document.createElement("input");
+            const inputOrc      = document.createElement("input");
             
             inputHuman.setAttribute("type", "button");
             inputElf.setAttribute("type", "button");
@@ -75,7 +75,7 @@ function stage() {
             .done(function(response) {
                 if (response == "Human" || response == "Człowiek") {
                     const humanAssasin = document.createElement("input");
-                    const humanArcher = document.createElement("input");
+                    const humanArcher  = document.createElement("input");
                     const humanWarrior = document.createElement("input");
                     
                     humanAssasin.setAttribute("type", "button");
@@ -95,8 +95,8 @@ function stage() {
                     humanArcher.addEventListener("click",  function(){clas = this.value; typeClass(clas); select(this);})           
                 }
                 else if (response == "Elf") {
-                    const elfAssasin = document.createElement("input");
-                    const elfArcher = document.createElement("input");
+                    const elfAssasin  = document.createElement("input");
+                    const elfArcher   = document.createElement("input");
                     const elfSorcerer = document.createElement("input");
                     
                     elfAssasin.setAttribute("type", "button");
@@ -116,10 +116,10 @@ function stage() {
                     elfSorcerer.addEventListener("click", function(){clas = this.value; typeClass(clas); select(this);})     
                 }
                 else if (response == "Half-Elf" || response == "Półelf") {
-                    const helfAssasin = document.createElement("input");
-                    const helfArcher = document.createElement("input");
+                    const helfAssasin  = document.createElement("input");
+                    const helfArcher   = document.createElement("input");
                     const helfSorcerer = document.createElement("input");
-                    const helfWarrior = document.createElement("input");
+                    const helfWarrior  = document.createElement("input");
                     
                     helfAssasin.setAttribute("type", "button");
                     helfArcher.setAttribute("type", "button");               
@@ -142,11 +142,11 @@ function stage() {
                     helfSorcerer.addEventListener("click", function(){clas = this.value; typeClass(clas); select(this);})     
                 }
                  else if (response == "Beastman" || response == "Zwierzoczłek") {
-                    const centaur = document.createElement("input");
-                    const faun = document.createElement("input");
+                    const centaur  = document.createElement("input");
+                    const faun     = document.createElement("input");
                     const minotaur = document.createElement("input");
                     const werewolf = document.createElement("input");
-                    const werecat = document.createElement("input");
+                    const werecat  = document.createElement("input");
                     
                     centaur.setAttribute("type", "button");
                     faun.setAttribute("type", "button");
@@ -195,7 +195,7 @@ function stage() {
             text.innerHTML = "Wybierz płeć dla swojej postaci:";  
             choose.innerHTML = "";
             
-            const man = document.createElement("input");
+            const man   = document.createElement("input");
             const woman = document.createElement("input");
             
             man.setAttribute("type", "button");
@@ -214,10 +214,10 @@ function stage() {
             text.innerHTML = "Wybierz kolor oczy dla swojej postaci:";  
             choose.innerHTML = "";
             
-            const blueEyes = document.createElement("input");
-            const greenEyes = document.createElement("input");
-            const brownEyes = document.createElement("input");
-            const redEyes = document.createElement("input");
+            const blueEyes   = document.createElement("input");
+            const greenEyes  = document.createElement("input");
+            const brownEyes  = document.createElement("input");
+            const redEyes    = document.createElement("input");
             const violetEyes = document.createElement("input");
             
             blueEyes.setAttribute("type", "button");
@@ -252,7 +252,7 @@ function stage() {
             const blondHair = document.createElement("input");
             const brownHair = document.createElement("input");
             const blackHair = document.createElement("input");
-            const redHair = document.createElement("input");
+            const redHair   = document.createElement("input");
             
             whiteHair.setAttribute("type", "button");
             blondHair.setAttribute("type", "button");
@@ -282,10 +282,10 @@ function stage() {
             text.innerHTML = "Wybierz wiarę dla swojej postaci:";  
             choose.innerHTML = "";
             
-            const oldGods = document.createElement("input");
-            const redGoddes = document.createElement("input");
+            const oldGods    = document.createElement("input");
+            const redGoddes  = document.createElement("input");
             const threeInOne = document.createElement("input");
-            const ateizm = document.createElement("input");
+            const ateizm     = document.createElement("input");
             
             oldGods.setAttribute("type", "button");
             redGoddes.setAttribute("type", "button");

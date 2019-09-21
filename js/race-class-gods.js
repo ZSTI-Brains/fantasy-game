@@ -1,18 +1,19 @@
-var text = true;
-var text2 = true; 
-var text3 = true; 
+var textRace  = true;
+var textClass = true; 
+var textGods  = true; 
 
 function typeRace(r) {
     const container = document.querySelector("#choose-container");
-    if (text == false) {
+    if (textRace == false) {
         container.removeChild(container.lastChild);
         container.removeChild(container.lastChild);
     }
     
-    text = false;
+    textRace = false;
     
     const description = document.createElement("p");
     description.classList.add("description");
+    
     if (r == "Human" || r == "Człowiek")
         description.innerText = "Ludzie są dominującą rasą na kontynencie, chodź jest ich niewiele więcej od elfów. Najlepsi szermierze w Orme to właśnie oni. Mimo iż większość to wojownicy, nie brakuje łuczków, skrytobójców. Największą wadą rasy ludzkiej jest brak umiejętności używania magii, którą utracili setki lat temu.";
     else if (r == "Elf")
@@ -37,15 +38,16 @@ function typeRace(r) {
 
 function typeClass(c) {
     const container = document.querySelector("#choose-container");
-    if (text2 == false) {
+    if (textClass == false) {
         container.removeChild(container.lastChild);
         container.removeChild(container.lastChild);
     }
     
-    text2 = false;
+    textClass = false;
     
     const description = document.createElement("p");
     description.classList.add("description");
+    
     if (c == "Assasin" || c == "Zabójca") { //Human & Elf & Half Elf
         description.innerHTML = "Zabójcy to najczęściej pół elfy, którzy wybierają to profesje ze względu na swoją rasę. Jednak nie brakuje również w tym fachu ludzi czy elfów, jednak umiejętnościami nie dorównują mieszańcom.";
     }
@@ -67,7 +69,7 @@ function typeClass(c) {
     else if (c == "Minotaur") {
         description.innerHTML = "Minotaury najbardziej ze zwierzoludzi nie są podobni do ludzkich istot, ich głowa przypomina byczą, a reszta ciała mają pokryte sierścią. Duża siła i wytrzymałość, pozwalają na walkę z wymagającymi przeciwnikami. Jednak są słabi w walki na miecze, dlatego preferują wielkie topory.";
     }
-    else if (c == "Werewolf" || c == "Wikołak") {
+    else if (c == "Werewolf" || c == "Wilkołak") {
         description.innerHTML = "Wilkołaki w pół bestie w pół istoty ludzkie, kiedy księżyc jest w pełni przemieniają się w krwiożercze monstrum, maszynę do zabijania. Aby zaspokoić swój głód wybijają nawet całe wioski. Tak krwiożercze monstrum nie może się narodzić, są to normalni ludzie na których została rzucona klątwa, której nie łatwo jest się pozbyć. Dużą wadą wilkołaków jest mała odporność na odniesione ranę, wskutek zadania srebrnym mieczem czy bronią wykonaną z tego metalu.";
     }
     else if (c == "Werecat" || c == "Kotołak") {
@@ -93,15 +95,16 @@ function typeClass(c) {
 
 function typeGods(g) {
     const container = document.querySelector("#choose-container");
-    if (text3 == false) {
+    if (textGods == false) {
         container.removeChild(container.lastChild);
         container.removeChild(container.lastChild);
     }
     
-    text3 = false;
+    textGods = false;
     
     const description = document.createElement("p");
     description.classList.add("description");
+    
     if(g == "Starzy Bogowie") {
         description.innerHTML = "Starzy Bogowie są głównie wyznawani w gronie elfów, lecz nie brakuje ludzi którzy ślą do nich swe modły. Wyznawcy starych bogów nie posiadają głównych miejsc w którym się zbierają i modlą, jednak mają swoich kapłanów, których na prawdę jest trudno rozróżnić nie będąc wyznawcą.";
     }
